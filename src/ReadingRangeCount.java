@@ -25,7 +25,7 @@ public class ReadingRangeCount {
     return outputMessage.trim();
   }
 
-  public static String printmessage(String message, List<Integer> range) {
+  public static String printMessage(String message, List<Integer> range) {
     return message + range.get(0).toString() + "-" + range.get(range.size() - 1).toString() + "," + range.size() + "\n";
   }
 
@@ -41,7 +41,7 @@ public class ReadingRangeCount {
       rangeList.add(currentReadings.get(index));
     }
     else if (rangeList.size() > 1) {
-      localMessage = formMessage(message, rangeList);
+      localMessage = printMessage(message, rangeList);
       clearList(currentReadings, rangeList, index);
     }
     else {
@@ -54,7 +54,7 @@ public class ReadingRangeCount {
       String message) {
     String localMessage = message;
     if (index == currentReadings.size() - 1 && rangeList.size() > 1) {
-      localMessage = formMessage(message, rangeList);
+      localMessage = printMessage(message, rangeList);
       clearList(currentReadings, rangeList, index);
     }
     return localMessage;
