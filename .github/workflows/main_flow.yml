@@ -14,5 +14,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Normal Run
-      run: javac Src/RangeReadingCount.java
+      run: javac Src/ReadingRangeCount.java
     
